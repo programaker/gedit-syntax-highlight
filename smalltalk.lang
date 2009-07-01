@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+<language name="Smalltalk" version="1.0" _section="Sources" mimetypes="text/x-smalltalk">
+    <block-comment _name="Multiline Comment" style="Comment">
+		<start-regex>&quot;</start-regex>
+		<end-regex>&quot;</end-regex>
+	</block-comment>
+	
+	<string _name = "String" style = "String" end-at-line-end = "FALSE">
+		<start-regex>&apos;</start-regex>
+		<end-regex>&apos;</end-regex>
+	</string>
+	
+	<pattern-item _name = "Symbols" style = "Data Type">
+        <regex>#[a-zA-Z0-9_]+</regex>
+    </pattern-item>
+    
+    <pattern-item _name = "Block Params" style = "Data Type">
+        <regex>:[a-zA-Z0-9_]+</regex>
+    </pattern-item>
+    
+    <pattern-item _name = "Characters" style = "Data Type">
+        <regex>\$[a-zA-Z0-9_]{1}</regex>
+    </pattern-item>
+    
+    <pattern-item _name="Integer Number" style="Decimal">
+        <regex>\b([1-9][0-9]*|0)[i]?\b</regex>
+    </pattern-item>
+    
+    <pattern-item _name="Floating Point Number" style="Floating Point">
+        <regex>\b([0-9]+[Ee][-+]?[0-9]+|([0-9]*\.[0-9]+|[0-9]+\.)([Ee][-+]?[0-9]+)?)[i]?\b</regex>
+    </pattern-item>
+    
+    <pattern-item _name="Delimiter" style="Others 3">
+        <regex>[\{\}]+|[][]+|[&lt;&gt;]+</regex>
+    </pattern-item>
+    
+    <pattern-item _name = "Constants" style = "Decimal">
+		<regex>\b[A-Z_][A-Za-z0-9_:]*\b</regex>
+	</pattern-item>
+	
+	<pattern-item _name = "Operators" style = "Keyword">
+		<regex>\^|:=</regex>
+	</pattern-item>
+	
+	<keyword-list _name = "Memory" style = "Keyword" case-sensitive="TRUE">
+		<keyword>self</keyword>
+		<keyword>super</keyword>
+		<keyword>true</keyword>
+		<keyword>false</keyword>
+		<keyword>nil</keyword>
+		<keyword>thisContext</keyword>
+	</keyword-list>
+</language>
