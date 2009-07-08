@@ -1,0 +1,1 @@
+To install a syntax highlight configuration, just copy the .lang files to /usr/share/gtksourceview-2.0/language-specs/
